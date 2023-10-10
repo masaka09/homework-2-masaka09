@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <!-- Add your external CSS link here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>BMI Calculator</h1>
+    <p>Enter your height:</p>
+    <input type="text" id="height" />
+    <p>Enter your weight:</p>
+    <input type="text" id="weight" />
+    <p></p>
+    <input type="button" value="Calculate BMI" onclick="calculateBMI();">
+    <input type="button" value="Calculate BMI (US)" onclick="calculateBMI_US();">
+    <h1>The BMI value is <span id="output"> </span> </h1>
+    <h1>The category is: <span id='comment'> </span> </h1>
+    <script>
+        function calculateBMI_US() {
+            var height = document.getElementById("height").value;
+            var weight = document.getElementById("weight").value;
+
+            var weightLb = weight;
+            var heightIn = height;
+
+            var bmiValue = (weightLb / (heightIn * heightIn)) * 703;
+
+
+            // Display the results on the page
+            document.getElementById("output").innerHTML = bmiValue.toFixed(2);
+
+            var bmiComment;
+            if (bmiValue < 18.5) {
+                bmiComment = "Underweight";
+            } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+                bmiComment = "Normal weight";
+            } else {
+                bmiComment = "Overweight";
+            }
+
+            document.getElementById("comment").innerHTML = bmiComment;
+        }
+        function calculateBMI() {
+                var height = document.getElementById("height").value;
+                var weight = document.getElementById("weight").value;
+
+               
+                var bmiValue = (weight/ (height * height));
+
+
+                // Display the results on the page
+                document.getElementById("output").innerHTML = bmiValue.toFixed(2);
+
+                var bmiComment;
+                if (bmiValue < 18.5) {
+                    bmiComment = "Underweight";
+                } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+                    bmiComment = "Normal weight";
+                } else {
+                    bmiComment = "Overweight";
+                }
+
+                document.getElementById("comment").innerHTML = bmiComment;
+            }
+    </script>
+</body>
+
+</html>

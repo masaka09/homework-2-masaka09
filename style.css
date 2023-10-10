@@ -1,0 +1,27 @@
+/* Updated Styles */
+body {
+    background-color: lightgray;
+    /* Updated background-color to lightgray */
+    text-align: center;
+    /* Updated text-align to center */
+    font-family: "Times New Roman", serif;
+    /* Updated font-family */
+}
+
+h1 {
+    color: blue;
+    /* Updated color to blue */
+    font-size: 36px;
+    /* Updated font-size to 36px */
+    margin-bottom: 20px;
+    /* Updated margin-bottom to 20px */
+}
+
+p {
+    color: darkslategray;
+    /* Updated color to darkslategray */
+    font-size: 18px;
+    /* Updated font-size to 18px */
+    line-height: 1.8;
+    /* Updated line-height to 1.8 */
+}
